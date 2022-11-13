@@ -1,0 +1,17 @@
+{% with title="Home" %}
+    {% include "components/top.html" %}
+{% endwith %}
+
+<h2>📚 My library</h2>
+<p>Your program or game is not visible? <a href="/add">Add it to your library</a>!</p>
+
+<div class="ly-items">
+    {% for app in apps %}
+    <div class="ly-item">
+        <img src="{{ app.icon }}" alt="App Icon">
+        <h3>{{ app.name }}</h3>
+    </div>
+    {% endfor %}
+</div>
+
+{% include "components/end.html" %}

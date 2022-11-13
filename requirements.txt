@@ -1,0 +1,8 @@
+flask
+arrow
+webview
+colorama
+requests
+LnkParse3
+python-dotenv
+beautifulsoup4

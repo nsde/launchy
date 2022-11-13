@@ -1,0 +1,20 @@
+{% with title="Home" %}
+    {% include "components/top.html" %}
+{% endwith %}
+
+<h2>➕ Add a new app</h2>
+<p><a href="/">Return back home</a></p>
+
+<h3>Name</h3>
+<input name="name">
+
+<h3>Icon</h3>
+<p>Click the button below or drag and drop an image on top of it.</p>
+<input type="file" name="icon">
+
+<h3>Command</h3>
+<p>Simply upload the file shortcut)</p>
+<input type="file" name="commamd"> or <input name="command">
+
+
+{% include "components/end.html" %}

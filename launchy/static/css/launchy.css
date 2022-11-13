@@ -1,0 +1,53 @@
+html.ly {
+  scroll-behavior: smooth;
+  color: #bbbbb6;
+  background: #0b0a10;
+}
+html.ly a {
+  color: #4a6cda;
+  text-decoration: none;
+}
+html.ly a:hover {
+  text-decoration: underline;
+}
+html.ly, html.ly body {
+  margin: 0;
+  padding: 0;
+}
+html.ly body {
+  margin: 3rem;
+}
+html.ly input {
+  padding: 5px;
+  font-size: large;
+  color: #bbbbb6;
+  border: none;
+  background: rgba(139, 138, 141, 0.2392156863);
+  outline: 3px solid transparent;
+  border-radius: 5px;
+}
+html.ly input[type=file] {
+  cursor: pointer;
+}
+html.ly input:focus {
+  outline-color: rgba(95, 159, 237, 0.6823529412);
+}
+html.ly footer.ly {
+  opacity: 0.8;
+  margin: 5rem;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  text-align: center;
+}
+
+* {
+  font-family: "Inter", sans-serif;
+  transition: 0.3s;
+}
+
+@supports (font-variation-settings: normal) {
+  * {
+    font-family: "Inter var", sans-serif;
+  }
+}/*# sourceMappingURL=launchy.css.map */
