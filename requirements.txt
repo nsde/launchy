@@ -3,6 +3,7 @@ arrow
 webview
 colorama
 requests
-LnkParse3
+# LnkParse3
 python-dotenv
 beautifulsoup4
+duckduckgo-search

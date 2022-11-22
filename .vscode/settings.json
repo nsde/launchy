@@ -9,12 +9,14 @@
         "launchy/static/css/launchy.css.map": true,
         "launchy/static/css/launchy.css": true,
         "launchy/launchy/__pycache__": true,
-        "launchy/__pycache__": true
+        "launchy/__pycache__": true,
+        ".vscode": true
     },
     "hide-files.files": [
         "launchy/static/css/launchy.css.map",
         "launchy/static/css/launchy.css",
         "launchy/launchy/__pycache__",
-        "launchy/__pycache__"
+        "launchy/__pycache__",
+        ".vscode"
     ]
 }

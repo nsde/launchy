@@ -5,16 +5,23 @@
 <h2>➕ Add a new app</h2>
 <p><a href="/">Return back home</a></p>
 
-<h3>Name</h3>
-<input name="name">
+<form method="POST">
+    <h3>Name</h3>
+    <input name="name" placeholder="Program name">
+    
+    <!-- <h3>Icon</h3>
+    <p>Click the button below or drag and drop an image on top of it.</p>
+    <input type="file" name="icon"> -->
+    
+    <h3>Command</h3>
+    <p>Simply upload the file shortcut or manually input a start command.</p>
+    <input type="file" name="commamd">
+    <div class="ly-or">
+        <hr><span>or</span><hr>
+    </div>
+    <input name="command" placeholder="Command">
 
-<h3>Icon</h3>
-<p>Click the button below or drag and drop an image on top of it.</p>
-<input type="file" name="icon">
-
-<h3>Command</h3>
-<p>Simply upload the file shortcut)</p>
-<input type="file" name="commamd"> or <input name="command">
-
+    <button type="submit">Save</button>
+</form>
 
 {% include "components/end.html" %}

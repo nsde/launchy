@@ -6,12 +6,27 @@
 <p>Your program or game is not visible? <a href="/add">Add it to your library</a>!</p>
 
 <div class="ly-items">
-    {% for app in apps %}
-    <div class="ly-item">
-        <img src="{{ app.icon }}" alt="App Icon">
-        <h3>{{ app.name }}</h3>
-    </div>
+    {% for app_id, app in apps %}
+        <div class="ly-item" onclick="launch('{{ app_id }}');">
+            <div class="ly-cover">
+                <div class="ly-gradient">
+                    <img src="{{ app.cover }}" alt="App Icon">
+                </div>
+                <span class="ly-title">{{ app.name }}</span>
+                <span class="ly-text">{{ app.command }}</span>
+            </div>
+        </div>
+    </a>
     {% endfor %}
 </div>
 
 {% include "components/end.html" %}
+
+<script>
+    function launch(app_id) {
+        var xmlHttp = new XMLHttpRequest();
+        xmlHttp.open("GET", `/launch/${app_id}`, false);
+        xmlHttp.send(null);
+    }
+
+</script>
