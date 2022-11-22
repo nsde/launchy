@@ -1,17 +1,56 @@
 {
-    "6d99013c-bfe0-46fc-9d6e-04e3f8e3b036": {
-        "name": "Visual Studio Code",
-        "cover": "https://external-preview.redd.it/q24h_o-q-5FupuAyUqVP46_z47w2soMJA40NmAD_zbU.jpg?auto=webp&s=2cb0ac91fb98bfc9e4f19c9c35f3254ffd3d7c14",
-        "command": ""
-    },
     "718e3b81-b032-4e23-a5d3-1ccb7dc2c830": {
         "name": "VSCode",
         "cover": "https://raw.githubusercontent.com/juanmnl/vs-1984/master/screenshots/1984.png",
-        "command": "code"
+        "command": "code",
+        "hidden": false
     },
-    "32adbeec-7455-4073-b6a6-7722dd869e06": {
-        "name": "Fortnite",
-        "cover": "https://logodix.com/logo/73947.jpg",
-        "command": ""
+    "d517bcee-2146-4395-9e5e-7f32ee3aee10": {
+        "name": "Lunar Client",
+        "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/201290/ss_b5ee138aa392b6ca5044459f2ae0676c55768b43.jpg",
+        "command": "start \"C:\\Users\\Lynx\\AppData\\Local\\Programs\\lunarclient\\Lunar Client.exe\"",
+        "hidden": true
+    },
+    "08a57bad-df21-40bd-abbc-5495a77265fd": {
+        "name": "Lunar Client",
+        "cover": "https://rtfm.co.ua/wp-content/uploads/2019/03/Screenshot_20190317_143711.png",
+        "command": "start \"C:\\Users\\Lynx\\AppData\\Local\\Programs\\lunarclient\\Lunar Client.exe\"",
+        "hidden": true
+    },
+    "05b4bd18-5f51-449a-8ce6-2766b3ae2d72": {
+        "name": "Lunar Client",
+        "cover": "https://rtfm.co.ua/wp-content/uploads/2019/03/Screenshot_20190317_143711.png",
+        "command": "start \"C:\\Users\\Lynx\\AppData\\Local\\Programs\\lunarclient\\Lunar Client.exe\"",
+        "hidden": true
+    },
+    "b089709b-aeee-4892-a1f0-820575a72348": {
+        "name": "Lunar Client",
+        "cover": "https://lh3.googleusercontent.com/-aWztotGuwQs/YKwQixcIbEI/AAAAAAAAAAM/TEk9GrVd27IChGwj3CLUXvG4YJ9E7ZDagCLcBGAsYHQ/w1200-h630-p-k-no-nu/Fondo+de+discord+xddd.png",
+        "command": "start \"C:\\Users\\Lynx\\AppData\\Local\\Programs\\lunarclient\\Lunar Client.exe\"",
+        "hidden": true
+    },
+    "0897c525-6e88-4b33-ad3e-807853fb9c49": {
+        "name": "Lunar Client",
+        "cover": "https://lh3.googleusercontent.com/-aWztotGuwQs/YKwQixcIbEI/AAAAAAAAAAM/TEk9GrVd27IChGwj3CLUXvG4YJ9E7ZDagCLcBGAsYHQ/w1200-h630-p-k-no-nu/Fondo+de+discord+xddd.png",
+        "command": "\"C:\\Users\\Lynx\\AppData\\Local\\Programs\\lunarclient\\Lunar Client.exe\"",
+        "hidden": false
+    },
+    "1acb3924-e4c3-4184-a731-bbfa1051b3f2": {
+        "name": "Start Tor Browser",
+        "cover": "https://thehackernews.com/images/-IMI-viu3OfY/VPAUyfTsehI/AAAAAAAAiAc/DVEOV04OSIE/s728-e100/tor-browser-download.jpg",
+        "command": "\"C:\\Users\\Lynx\\Desktop\\Tor Browser\\Browser\\firefox.exe\"",
+        "hidden": true
+    },
+    "c4ce86ca-902c-49eb-845c-7f3be5000f6d": {
+        "name": "Discord",
+        "cover": "https://preview.redd.it/y6rc2sm425051.jpg?auto=webp&s=707c880518f467f2fc25714e4a05e35d603abea7",
+        "command": "\"C:\\Users\\Lynx\\AppData\\Local\\Discord\\Update.exe\" --processStart Discord.exe",
+        "hidden": false
+    },
+    "aa3e857a-2665-4827-8e69-365d9e3ed42b": {
+        "name": "Signal",
+        "cover": "https://wallpapercave.com/wp/wp6047815.jpg",
+        "command": "\"C:\\Users\\Lynx\\AppData\\Local\\Programs\\signal-desktop\\Signal.exe\"",
+        "hidden": false
     }
 }

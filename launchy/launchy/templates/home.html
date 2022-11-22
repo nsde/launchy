@@ -2,22 +2,36 @@
     {% include "components/top.html" %}
 {% endwith %}
 
-<h2>📚 My library</h2>
-<p>Your program or game is not visible? <a href="/add">Add it to your library</a>!</p>
+<main>
+    <h2>📚 My library</h2>
+    <p>Your program or game is not visible? <a href="/add">Add it to your library</a>!</p>
+</main>
 
 <div class="ly-items">
     {% for app_id, app in apps %}
+        {% if not app.hidden %}
         <div class="ly-item" onclick="launch('{{ app_id }}');">
             <div class="ly-cover">
                 <div class="ly-gradient">
                     <img src="{{ app.cover }}" alt="App Icon">
                 </div>
+                <i title="Delete" onclick="del('{{ app_id }}');" class="bi bi-trash"></i>
                 <span class="ly-title">{{ app.name }}</span>
                 <span class="ly-text">{{ app.command }}</span>
             </div>
         </div>
-    </a>
+        {% endif %}
     {% endfor %}
+    
+    <div class="ly-item" onclick="window.location.href = '/add';">
+        <div class="ly-cover">
+            <div class="ly-gradient">
+                <img src="/static/plus.png" alt="Add new app">
+            </div>
+            <span class="ly-title">Add</span>
+            <span class="ly-text">Click to add a new app</span>
+        </div>
+    </div>
 </div>
 
 {% include "components/end.html" %}
@@ -27,6 +41,13 @@
         var xmlHttp = new XMLHttpRequest();
         xmlHttp.open("GET", `/launch/${app_id}`, false);
         xmlHttp.send(null);
+    }
+
+    function del(app_id) {
+        var xmlHttp = new XMLHttpRequest();
+        xmlHttp.open("GET", `/del/${app_id}`, false);
+        xmlHttp.send(null);
+        window.location.reload();
     }
 
 </script>

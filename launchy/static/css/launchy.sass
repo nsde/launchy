@@ -12,17 +12,28 @@ html.ly
         margin: 0
         padding: 0
     
-    body
+    header, main
         margin: 3rem
+
+    header, h1
+        margin-bottom: 0
+    
+    header h1
+        cursor: pointer
 
     scroll-behavior: smooth
 
     color: $fg
     background: $bg
 
-    input
+    div.ly-base
+        width: 30%
+        margin: 0 auto
+
+    input, button, select
+        width: 100%
         padding: 5px
-        font-size: large
+        font-size: larger
 
         color: $fg
         border: none
@@ -37,60 +48,119 @@ html.ly
         &:focus
             outline-color: $active-input
 
-    div.ly-item
+    option
         color: white
-        display: inline-block
+        background: $bg
 
-        div.ly-cover
-            cursor: pointer
-            position: relative
+    button
+        width: 100%
+        margin-top: 1rem
+        cursor: pointer
+        
+        border: 2px solid $blue
 
-            div.ly-gradient
-                // border-radius: 10px
+        &:hover
+            background: $blue
+
+    div.ly-items
+        width: 100%
+        display: flex
+
+        flex: 1 1 0px
+        flex-wrap: wrap
+        flex-direction: row
+
+        div.ly-item
+            color: white
+            display: inline-block
+            margin-top: -4px
+
+            div.ly-cover
                 cursor: pointer
-                overflow: hidden
-                display: inline-block
                 position: relative
 
-                &:after
-                    content: ""
+                div.ly-gradient
+                    // border-radius: 10px
+                    cursor: pointer
+                    overflow: hidden
+                    display: inline-block
+                    position: relative
+
+                    &:after
+                        content: ""
+                        position: absolute
+                        left: 0
+                        top: 0
+                        width: 100%
+                        height: 100%
+                        display: inline-block
+                        background: linear-gradient(90deg, rgba(0,0,0,0.92) 0%, rgba(0,0,0,0.48) 37%, rgba(255,255,255,0) 100%)
+
+                    img
+                        overflow: hidden
+                        display: block
+                        object-fit: cover
+                        
+                        height: 300px
+                        width: calc(calc(100vw / 2) - 16px)
+
+                span.ly-title
+                    font-size: 2rem
+                    font-weight: 300
+                    bottom: 1rem
+                    left: 1rem
                     position: absolute
+
+                svg
                     left: 0
                     top: 0
                     width: 100%
                     height: 100%
-                    display: inline-block
-                    background: linear-gradient(90deg, rgba(0,0,0,0.9247899843531162) 0%, rgba(0,0,0,0.4878151944371498) 37%, rgba(255,255,255,0) 100%)
+                    padding: auto
+                    position: absolute
 
+                    opacity: 0
+
+                i
+                    font-size: 2rem
+                    opacity: 0
+                    right: 1rem
+                    bottom: 1rem
+                    color: white
+                    position: absolute  
+
+                    &:hover
+                        color: red
+
+            &:hover
                 img
-                    overflow: hidden
-                    display: block
-                    height: 300px
+                    opacity: 0.5
+                    transform: scale(1.05)
 
-            span.ly-title
-                font-size: 2rem
-                font-weight: 300
-                bottom: 1rem
+                svg
+                    opacity: 1 !important
+
+                span.ly-title
+                    transform: translateY(-1rem)
+
+                span.ly-text
+                    opacity: 0.9
+
+                i
+                    opacity: 1 !important
+
+            &:active
+                img
+                    filter: saturate(0)
+
+            span.ly-text
+                opacity: 0
                 left: 1rem
+                bottom: 1rem
                 position: absolute
+                min-width: 300px
 
-        &:hover img
-            filter: blur(2deg)
-            transform: scale(1.3)
-
-        &:hover span.ly-title
-            transform: translateY(-1rem)
-
-        &:hover span.ly-text
-            opacity: 0.9
-
-        span.ly-text
-            opacity: 0
-            left: 1rem
-            bottom: 1rem
-            position: absolute
-
-            font-family: monospace
+                // font-family: monospace
 
     footer.ly
         opacity: 0.8
@@ -101,14 +171,16 @@ html.ly
         text-align: center
 
     div.ly-or
+        width: 100%
         margin: 1rem
 
         hr
             display: inline-block
-            width: 100px
+            width: 40%
         
         span
             margin: 1rem
+            font-weight: bold
 
 *
     font-family: 'Inter', sans-serif

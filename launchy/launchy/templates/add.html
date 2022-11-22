@@ -2,26 +2,43 @@
     {% include "components/top.html" %}
 {% endwith %}
 
-<h2>➕ Add a new app</h2>
-<p><a href="/">Return back home</a></p>
+<main>
+    <div class="ly-base">
+        <h2>➕ Add a new app</h2>
+        <form method="POST">
+            <h3>Add detected app</h3>
+            <select name="detected_apps">
+                {% for app in detected_apps %}
+                    <option value="{{ app.path }}">{{ app.name }}</option>
+                {% endfor %}
+            </select> 
 
-<form method="POST">
-    <h3>Name</h3>
-    <input name="name" placeholder="Program name">
-    
-    <!-- <h3>Icon</h3>
-    <p>Click the button below or drag and drop an image on top of it.</p>
-    <input type="file" name="icon"> -->
-    
-    <h3>Command</h3>
-    <p>Simply upload the file shortcut or manually input a start command.</p>
-    <input type="file" name="commamd">
-    <div class="ly-or">
-        <hr><span>or</span><hr>
+            <div class="ly-or">
+                <hr><span>or</span><hr>
+            </div>
+
+            <h3>Add manually</h3>
+
+            <h4>Name</h4>
+            <input name="name" placeholder="e.g. Calculator">
+            
+            <!-- <h3>Icon</h3>
+            <p>Click the button below or drag and drop an image on top of it.</p>
+            <input type="file" name="icon"> -->
+            
+            <h4>Startup command</h4>
+            <!-- <p>Simply upload the file shortcut or manually input a start command.</p>
+            <input type="file" name="commamd">
+            <div class="ly-or">
+                <hr><span>or</span><hr>
+            </div> -->
+            <input name="command" placeholder="e.g. calc.exe">
+            
+            <br>
+            <button type="submit">Add</button>
+        </form>
+        <p><a href="/">Return back home</a></p>
     </div>
-    <input name="command" placeholder="Command">
-
-    <button type="submit">Save</button>
-</form>
+</main>
 
 {% include "components/end.html" %}
